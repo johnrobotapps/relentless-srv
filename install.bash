@@ -4,13 +4,13 @@
 # mongodb, python 3, and pymongo
 
 # Upgrade all the prepackaged work
-sudo apt upgrade
+sudo apt upgrade -y
 
 # Add the Official MongoDB verion
 echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/5.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-5.0.list
 
 # Install MongoDB
-sudo apt update
+sudo apt update -y
 sudo apt install -y mongodb-org
 
 # Export a MongoDB start command
