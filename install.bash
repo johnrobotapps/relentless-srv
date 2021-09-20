@@ -37,7 +37,7 @@ sudo ln -s /usr/local/bin/pip3.9 /usr/bin/pip
 pip install --upgrade pip
 
 # Install PyMongo python package
-pip install pymongo
+pip install pymongo, flask
 
 # Go back to starting location
 cd $cwd
