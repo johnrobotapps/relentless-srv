@@ -63,7 +63,6 @@ class FoodJournals:
 
 @app.route(routes["home"], methods=["GET"])
 def home():
-
     return "API for Relentless Performance App"
 
 
