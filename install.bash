@@ -3,6 +3,12 @@
 # with an Ubuntu 20.04 server using
 # mongodb, python 3, and pymongo
 
+
+cwd=$(pwd)
+PYTHON_VERSION="3.9.7"
+#MONGODB_VERSION=""
+
+
 # Upgrade all the prepackaged work
 sudo apt upgrade -y
 
@@ -18,10 +24,8 @@ sudo apt install -y mongodb-org
 echo "alias start_mongod=\"sudo systemctl start mongod\"" >> ~/.bashrc
 
 # Install Python 3.9
-PYTHON_VERSION="3.9.7"
 sudo apt install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev libsqlite3-dev wget libbz2-dev
 
-cwd=$(pwd)
 cd ~
 wget https://www.python.org/ftp/python/$PYTHON_VERSION/Python-$PYTHON_VERSION.tgz
 tar -zxvf Python-$PYTHON_VERSION.tgz
@@ -37,7 +41,8 @@ sudo ln -s /usr/local/bin/pip3.9 /usr/bin/pip
 pip install --upgrade pip
 
 # Install PyMongo python package
-pip install pymongo, flask
+pip install pymongo flask
+
 
 # Go back to starting location
 cd $cwd
