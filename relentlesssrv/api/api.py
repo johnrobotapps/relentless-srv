@@ -15,23 +15,23 @@ app.config["DEBUG"] = True
 
 
 
-class FoodJournals:
-
-    def __init__(self):
-        self._dict = dict()
-
-    def __contains__(self, username):
-
-        if username in self._dict:
-            return True
-        else:
-            return False
-
-    def get(self, username, ifmissing=dict()):
-
-        return self._dict.get(
-            username, ifmissing
-        )
+#class FoodJournals:
+#
+#    def __init__(self):
+#        self._dict = dict()
+#
+#    def __contains__(self, username):
+#
+#        if username in self._dict:
+#            return True
+#        else:
+#            return False
+#
+#    def get(self, username, ifmissing=dict()):
+#
+#        return self._dict.get(
+#            username, ifmissing
+#        )
 
 
 
@@ -40,7 +40,7 @@ def home():
     return "API for Relentless Performance App"
 
 
-@app.route(routes["logentry"], methods=["GET"])
+@app.route(routes["foodJournal"], methods=["GET"])
 def logentry():
 
     user = request.args.get("user", None)
